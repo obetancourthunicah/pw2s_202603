@@ -6,6 +6,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prototipo HTML con Bulma</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+    <style>
+        :root {
+            --custom-h: 246deg;
+            --custom-s: 62%;
+            --custom-l: 48%;
+            
+            --custom-t-h: 220deg;
+            --custom-t-s: 86%;
+            --custom-t-l: 3%;
+
+            --bulma-primary-h: var(--custom-h);
+            --bulma-primary-s: var(--custom-s);
+            --bulma-primary-l: var(--custom-l);
+            /* background-color: hsl(246, 62%, 48%); */
+
+            --bulma-text-h:var(--custom-t-h);
+            --bulma-text-s: var(--custom-t-s);
+            --bulma-text-l: var(var(--custom-t-l));
+            /* color: hsl(220, 86%, 3%);  */
+        }
+
+        @media (prefers-color-scheme: light) {
+            :root {
+                --bulma-primary-h: var(--custom-h);
+                --bulma-primary-s: var(--custom-s);
+                --bulma-primary-l: var(--custom-l);
+                --bulma-text-h:var(--custom-t-h);
+                --bulma-text-s: var(--custom-t-s);
+                --bulma-text-l: var(var(--custom-t-l));
+            }
+        }
+
+        :root [data-theme="light"] {
+            --bulma-primary-h: var(--custom-h);
+            --bulma-primary-s: var(--custom-s);
+            --bulma-primary-l: var(--custom-l);
+            --bulma-text-h:var(--custom-t-h);
+            --bulma-text-s: var(--custom-t-s);
+            --bulma-text-l: var(var(--custom-t-l));
+        }
+
+        .card-ojba {
+            max-width: 320px !important;
+        }
+
+        .gap {
+            gap: 1rem;
+        }
+    </style>
 </head>
 
 <body data-theme="light">
@@ -80,7 +129,7 @@
         </nav>
     </header>
     <main>
-        <section class="hero is-info is-fullheight">
+        <section class="hero has-background-primary is-fullheight">
             <div class="hero-body columns is-mobile is-multiline">
                 <div class="column is-full-mobile is-one-third-desktop">
                     <p class="title">Fullheight hero</p>
@@ -89,13 +138,9 @@
                 <div class="column">
                     <figure class="image">
                         <picture>
-                            <source
-                                srcset="https://picsum.photos/id/45/640/640"
-                                media="(min-width:700px)"/>
-                            <img
-                                src="https://picsum.photos/id/45/320/320"
-                                alt="Hero panel half image"
-                                class="is-rounded"/>
+                            <source srcset="https://picsum.photos/id/45/640/640" media="(min-width:700px)" />
+                            <img src="https://picsum.photos/id/45/320/320" alt="Hero panel half image"
+                                class="is-rounded" />
                         </picture>
                     </figure>
                 </div>
@@ -103,14 +148,127 @@
         </section>
         <section class="container is-max-desktop mt-4">
             <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat numquam soluta velit, temporibus, fugiat doloribus ea quam repellendus ad atque vitae quo aliquid. Corrupti, asperiores voluptatum! Dignissimos quaerat earum deleniti!Loremlore
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed autem fugit voluptate nemo blanditiis soluta earum velit sunt deleniti! Suscipit voluptas sunt in aperiam minus quasi voluptate repudiandae corrupti accusamus.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi odit adipisci voluptas consequuntur iure dolor. Dolore amet laborum at a doloremque, aliquam officia eaque, et iure consectetur sint eligendi minima.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse pariatur sapiente tempora odit maxime nam odio neque aut blanditiis, voluptatibus rem excepturi quaerat doloremque ab ex, laborum amet reprehenderit eveniet!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat numquam soluta velit, temporibus,
+                fugiat doloribus ea quam repellendus ad atque vitae quo aliquid. Corrupti, asperiores voluptatum!
+                Dignissimos quaerat earum deleniti!Loremlore
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed autem fugit voluptate nemo blanditiis
+                soluta earum velit sunt deleniti! Suscipit voluptas sunt in aperiam minus quasi voluptate repudiandae
+                corrupti accusamus.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi odit adipisci voluptas consequuntur iure
+                dolor. Dolore amet laborum at a doloremque, aliquam officia eaque, et iure consectetur sint eligendi
+                minima.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse pariatur sapiente tempora odit maxime nam
+                odio neque aut blanditiis, voluptatibus rem excepturi quaerat doloremque ab ex, laborum amet
+                reprehenderit eveniet!
             </p>
         </section>
-    </main>
+        <section class="container is-max-desktop mt-4 columns is-multiline is-mobile">
 
+        </section>
+        <section class="container is-max-desktop mt-4 is-flex
+            gap is-align-items-stretch is-flex-wrap-wrap
+            is-justify-content-center">
+            <div class="card card-ojba">
+                <div class="card-image">
+                    <figure class="image is-4by3">
+                        <img src="https://bulma.io/assets/images/placeholders/1280x960.png" alt="Placeholder image" />
+                    </figure>
+                </div>
+                <div class="card-content">
+                    <div class="media">
+                        <div class="media-left">
+                            <figure class="image is-48x48">
+                                <img src="https://bulma.io/assets/images/placeholders/96x96.png"
+                                    alt="Placeholder image" />
+                            </figure>
+                        </div>
+                        <div class="media-content">
+                            <p class="title is-4">John Smith</p>
+                            <p class="subtitle is-6">@johnsmith</p>
+                        </div>
+                    </div>
+
+                    <div class="content">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec
+                        iaculis mauris. <a>@bulmaio</a>. <a href="#">#css</a>
+                        <a href="#">#responsive</a>
+                        <br />
+                        <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+                    </div>
+                </div>
+            </div>
+            <div class="card card-ojba">
+                <div class="card-image">
+                    <figure class="image is-4by3">
+                        <img src="https://bulma.io/assets/images/placeholders/1280x960.png" alt="Placeholder image" />
+                    </figure>
+                </div>
+                <div class="card-content">
+                    <div class="media">
+                        <div class="media-left">
+                            <figure class="image is-48x48">
+                                <img src="https://bulma.io/assets/images/placeholders/96x96.png"
+                                    alt="Placeholder image" />
+                            </figure>
+                        </div>
+                        <div class="media-content">
+                            <p class="title is-4">John Smith</p>
+                            <p class="subtitle is-6">@johnsmith</p>
+                        </div>
+                    </div>
+
+                    <div class="content">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec
+                        iaculis mauris. <a>@bulmaio</a>. <a href="#">#css</a>
+                        <a href="#">#responsive</a>
+                        <br />
+                        <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+                    </div>
+                </div>
+            </div>
+            <div class="card card-ojba">
+                <div class="card-image">
+                    <figure class="image is-4by3">
+                        <img src="https://bulma.io/assets/images/placeholders/1280x960.png" alt="Placeholder image" />
+                    </figure>
+                </div>
+                <div class="card-content">
+                    <div class="media">
+                        <div class="media-left">
+                            <figure class="image is-48x48">
+                                <img src="https://bulma.io/assets/images/placeholders/96x96.png"
+                                    alt="Placeholder image" />
+                            </figure>
+                        </div>
+                        <div class="media-content">
+                            <p class="title is-4">John Smith</p>
+                            <p class="subtitle is-6">@johnsmith</p>
+                        </div>
+                    </div>
+
+                    <div class="content">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec
+                        iaculis mauris. <a>@bulmaio</a>. <a href="#">#css</a>
+                        <a href="#">#responsive</a>
+                        <br />
+                        <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+                    </div>
+                </div>
+            </div>
+            &nbsp;
+        </section>
+    </main>
+    <footer class="footer mt-4 has-background-primary">
+        <div class="content has-text-centered">
+            <p>
+                <strong>Bulma</strong> by <a href="https://jgthms.com">Jeremy Thomas</a>.
+                The source code is licensed
+                <a href="https://opensource.org/license/mit">MIT</a>. The
+                website content is licensed
+                <a href="https://creativecommons.org/licenses/by-nc-sa/4.0//">CC BY NC SA 4.0</a>.
+            </p>
+        </div>
+    </footer>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
 
