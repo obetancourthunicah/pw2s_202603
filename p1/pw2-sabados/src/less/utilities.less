@@ -17,11 +17,21 @@
     box-shadow: 3px 3px 5px darken(@primary-bg-color, 60%);
 }
 .shadow-sm {
-    box-shadow: 1px 1px 3px darken(@primary-bg-color, 60%);
+    box-shadow: 2px 2px 3px darken(@primary-bg-color, 60%);
 }
 .shadow-md {
     box-shadow: 7px 7px 13px darken(@primary-bg-color, 60%);
 }
 .shadow-lg {
     box-shadow: 13px 13px 21px darken(@primary-bg-color, 60%);
+}
+
+.button {
+    border: 1px solid @primary-bg-color;
+    padding: @units[3] @units[4];
+    .shadow-sm();
+    background-color: @primary-bg-color;
+    color: @primary-tx-color;
+    font-weight: bold;
+    text-align: center;
 }
