@@ -1,7 +1,7 @@
 import indexPageData from './pages/indexPage.js';
 const getPageContext = (pagePath)=>{
     console.log("getPageContext Invoked:", pagePath);
-    let context= {};
+    let context = {};
     switch (pagePath){
         case "/index.html":
             context = {...context, ...indexPageData};
